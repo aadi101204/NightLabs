@@ -1,0 +1,14 @@
+{
+  "name": "nightlabs",
+  "version": "1.0.0",
+  "description": "A Web application to improve efficiency of IEEE physical workspaces ( NightLabs )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.7.2"
+  }
+}
