@@ -4,3 +4,4 @@ mongoose
   .connect("mongodb://localhost:27017/NightLabs")
   .then(() => console.log("database connected"))
   .catch((error) => console.log(error));
+
