@@ -14,4 +14,4 @@ const approveStatus = new mongoose.Schema({
   LabDate: { type: Date, required: true },
 });
 
-module.exports = mongoose.model("NightLab", nightlabs);
+module.exports = mongoose.model("applyNightLab", applyNightlabs);

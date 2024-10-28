@@ -1,28 +1,15 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
 
-const userProfile = new mongoose.Schema({
-  AccountDetails,
-  LabsHistory,
-  Projects,
-  HostelDetails,
-});
-const AccountDetails = new mongoose.Schema({
-  Username: { type: String, require: true },
-  password: { type: String, require: true },
-  memberID: { type: Schema.types.ObjectID, require: true },
-  position: { type: String, require: true },
-  mgmtPosition: { type: String, require: true },
-});
-const LabsHistory = new mongoose.Schema({
-  TotalAttended: { type: Number, require: false },
-  NightLab,
-});
-const HostelDetails = new mongoose.Schema({
-  Name: { type: String, require: true },
-  hostelType: { type: String, enum: ["MH", "LH"] },
-  block: { type: String, require: true },
-  RegNo: { type: String, require: true },
+const User = mongoose.Schema({
+  username: { type: String, unique: true, require: true },
+  emailid: { type: String, unique: true, require: true },
+  password: { type: String, unique: true, require: true },
+  role: {
+    type: String,
+    enum: ["Board", "JC", "SC", "Ops", "Sponsorship", "RnO", "PnM"],
+  },
+  isVerified: { type: Boolean, require: true },
+  createdOn: { type: Date, require: true },
 });
 
-module.exports = mongoose.model("user", userProfile);
+module.exports = mongoose.model("User", User);
