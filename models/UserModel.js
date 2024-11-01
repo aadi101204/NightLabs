@@ -10,6 +10,20 @@ const User = mongoose.Schema({
   },
   isVerified: { type: Boolean, require: true },
   createdOn: { type: Date, require: true },
+  userid,
+  isProject: { type: Boolean, require: true, default: false },
+  HostelDetails ,
+});
+
+const HostelDetails = new mongoose.Schema({
+  Name: { type: String, require: true },
+  hostelType: { type: String, enum: ["MH", "LH"] },
+  block: { type: String, require: true },
+  RegNo: { type: String, require: true },
+});
+
+const userid = mongoose.Schema({
+  memberID: { type: Schema.Types.ObjectID, require: true },
 });
 
 module.exports = mongoose.model("User", User);

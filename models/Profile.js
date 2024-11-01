@@ -9,7 +9,6 @@ const userProfile = new mongoose.Schema({
 });
 const LabsHistory = new mongoose.Schema({
   TotalAttended: { type: Number, require: false },
-  NightLab,
 });
 const HostelDetails = new mongoose.Schema({
   Name: { type: String, require: true },
